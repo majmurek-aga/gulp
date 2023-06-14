@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HouseholdBudget</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,400,700,800&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <img class="logo" src="assets/logo-magyarrigo.svg" />
+        <p class="projectTitle">HouseholdBudget</p>
+        <nav class="navContainer">
+          <ul class="navContainer__buttons">
+            <li class="navContainer__element">
+              <a href="#incomes" class="navContainer__link">INCOMES</a>
+            </li>
+            <li class="navContainer__element">
+              <a href="#expenses" class="navContainer__link">EXPENSES</a>
+            </li>
+            <li class="navContainer__element">
+              <a href="#aboutMe" class="navContainer__link">ABOUTME</a>
+            </li>
+          </ul>
+
+          <div class="navContainer__hamburger">
+            <div class="navContainer__hamburger--line"></div>
+            <div class="navContainer__hamburger--line"></div>
+            <div class="navContainer__hamburger--line"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container main__container">
+      <div class="row balanceSheet">
+        <div class="col-1 balanceSheet__leftField"></div>
+
+        <div class="col-10 balanceSheet__result">
+          <div id="balanceSheetResult">WPROWADŹ PRAWIDŁOWE DANE</div>
+        </div>
+        <div class="col-1 balanceSheet__rightField"></div>
+      </div>
+
+      <div class="row inputFields">
+        <div class="col-6 inputFields__incomes">
+          <p class="inputFields__incomes--separatingLine">"."</p>
+          <h1 id="incomes">PRZYCHODY:</h1>
+          <form class="inputFields__incomes--inputArea">
+            <input
+              type="text"
+              id="inputIncomeText"
+              placeholder="Nazwa przychodu"
+            />
+            <input type="number" id="inputIncomeSum" placeholder="Kwota" />
+            <button type="button" id="inputIncomeButton">DODAJ</button>
+          </form>
+          <p class="inputFields__incomes--separatingLine">"."</p>
+        </div>
+
+        <div class="col-6 inputFields__expenses">
+          <p class="inputFields__expenses--separatingLine">"."</p>
+          <h1 id="expenses">WYDATKI:</h1>
+          <form class="inputFields__expenses--inputArea">
+            <input
+              type="text"
+              id="inputExpenseText"
+              placeholder="Nazwa wydatku"
+            />
+            <input type="number" id="inputExpenseSum" placeholder="Kwota" />
+            <button type="button" id="inputExpenseButton">DODAJ</button>
+          </form>
+          <p class="inputFields__expenses--separatingLine">"."</p>
+        </div>
+      </div>
+
+      <section class="row balanceTable">
+        <div class="col-6 balanceTable__incomes">
+          <div>
+            <div class="balanceTable__incomes--container">
+              <div>
+                <p class="balanceTable__incomes--separatingLine">"."</p>
+                <ul id="balanceTableIncomesList">
+                  <li>
+                    <div class="balanceTable__incomes--list">
+                      <p id="item-0" class="balanceTable__incomes--item">
+                        LISTA PRZYCHODÓW
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <h1 class="balanceTable__incomes--summary" id="incomesSummary">
+                SUMA PRZYCHODÓW: 0 zł
+              </h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 balanceTable__expenses">
+          <div>
+            <div class="balanceTable__expenses--container">
+              <div>
+                <p class="balanceTable__expenses--separatingLine">"."</p>
+                <ul id="balanceTableExpensesList">
+                  <li class="balanceTable__expenses--list">
+                    <p>LISTA WYDATKÓW</p>
+                  </li>
+                </ul>
+              </div>
+              <h1 class="balanceTable__expenses--summary" id="expensesSummary">
+                SUMA WYDATKÓW: 0 zł
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="row aboutMe" id="aboutMe">
+        <div class="col-2 aboutMe__myPicture">
+          <div class="aboutMe__myPicture--cirkle"></div>
+        </div>
+        <div class="col-10 aboutMe__myCV">
+          <h2 id="about">about Me</h2>
+          <p>
+            I graduated from the Technical University in Budapest. I'm Master of
+            Science in Nuclear Power Engineering. I have been interested in
+            programming since my studies. This year I became interested in
+            creating websites, so I decided to learn English and complete a
+            "Frontend Developer" course at CODERSLAB and "Java Script and React"
+            course at FUTURE COLLARS.
+          </p>
+
+          <p>
+            Fluent in German, Russian and Hungarian. English - B2. My native
+            language is Polish.
+          </p>
+
+          <p>I will be happy to answer your questions.</p>
+
+          <p>
+            Basketball is my cup of tea. I was a basketball referee for 25
+            years.
+          </p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="contact">
+      <div class="footer__container">
+        <div class="footer__container--logo">
+          <img src="./assets/logo-magyarrigo.svg" />
+        </div>
+        <div class="footer__container--buttons">
+          <a href="#balanceSheetResult">INPUTS</a>
+          <a href="#expenses">EXPENSES</a>
+        </div>
+
+        <div class="footer__container--contact">
+          <div id="phone">
+            <img src="./assets/phone.svg" />
+            <p>+48 535 092 608</p>
+          </div>
+          <div id="mail">
+            <img src="./assets/mail.svg" />
+            <p>b.drozd07@gmail.com</p>
+          </div>
+        </div>
+        <div class="footer_container--mediaIcons">
+          <img src="./assets/Twitter.svg" />
+          <img src="./assets/Facebook.svg" />
+          <img id="tiktok" src="./assets/Tiktok.jpg" />
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
