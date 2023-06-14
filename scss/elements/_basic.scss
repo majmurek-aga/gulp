@@ -1,0 +1,46 @@
+@use "sass:math";
+
+$columns: 12;
+$containerWidth: 1352px;
+$gutter: 12px;
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: math.div(100%, $columns) * $i;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-open-sans;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $font-open-sans;
+  font-size: 1.5rem;
+  color: $color-primary;
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+[class*="col-"] {
+  min-height: 1px;
+  @include mobile {
+    width: 100%;
+  }
+}

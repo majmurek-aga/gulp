@@ -1,0 +1,113 @@
+.header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 6px $color-primary-shadow;
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: $color-grey;
+  }
+  .logo {
+    height: 100%;
+    width: 20%;
+    padding-left: 0.5%;
+  }
+  .projectTitle {
+    position: relative;
+    width: 20%;
+    font-size: 2em;
+    font-weight: 700;
+    color: $color-title;
+    @include mobile {
+      width: 20%;
+      font-size: 1.5em;
+      padding-left: 0;
+    }
+  }
+  .navContainer {
+    width: 35%;
+
+    right: 1em;
+    &__buttons {
+      right: 1em;
+      width: 55%;
+      display: flex;
+      justify-content: space-between;
+      @include mobile {
+        position: absolute;
+        right: 1em;
+        top: 73px;
+        background-color: $color-grey-medium;
+        height: 30vh;
+        flex-direction: column;
+        text-align: center;
+        width: 20%;
+        transform: translate(100%);
+        &--active {
+          transform: translate(0%);
+          z-index: 5;
+        }
+      }
+    }
+    &__link {
+      color: $color-white;
+      font-weight: 700;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      padding: 28px 18px 22px;
+      border-bottom: 4px solid transparent;
+      letter-spacing: 0.1875rem;
+      @include mobile {
+        color: $color-primary;
+      }
+      &:hover {
+        color: $color-black;
+        border-color: $color-primary;
+      }
+    }
+    &__element {
+      padding: 0 1em;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    &__hamburger {
+      position: relative;
+      right: -70%;
+      background: transparent;
+      border: none;
+      outline: none;
+
+      display: none;
+      &--line {
+        width: 2em;
+        height: 0.2em;
+        background-color: $color-primary;
+        margin: 0.7em;
+        border-radius: 20px;
+        transition: 0.3s ease-in-out;
+      }
+      @include mobile {
+        display: block;
+        transition: 0.3s ease-in-out;
+        &--active {
+          .navContainer__hamburger--line:first-child {
+            transform: translateY(-999px);
+          }
+          .navContainer__hamburger--line:nth-child(2) {
+            transform: rotate(-405deg) translateY(10px);
+          }
+          .navContainer__hamburger--line:nth-child(3) {
+            transform: rotate(45deg) translateY(-10px);
+          }
+        }
+      }
+    }
+  }
+}

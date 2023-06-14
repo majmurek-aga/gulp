@@ -1,0 +1,10 @@
+button{
+border-radius: 10px;
+background-color: $color-button;
+border-color: $color-light-grey;
+border: solid 1px;
+color: $color-white;
+}
+.button--warrning{
+    background-color: $color-button-warrning;
+}

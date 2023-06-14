@@ -1,0 +1,31 @@
+.balanceSheet {
+  display: flex;
+  height: 200px;
+  border: solid 1px $color-primary;
+  border-radius: 10px;
+
+  &__result {
+    display: flex;
+    align-items: center;
+    background-color: $color-light-grey;
+    color: $color-primary;
+    font-weight: 400;
+    padding-left: 0.5em;
+    @include mobile {
+      border: solid 1px $color-primary;
+      border-radius: 10px;
+    }
+  }
+  &__leftField {
+    background-color: $color-grey-medium;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__rightField {
+    background-color: $color-grey-medium;
+    @include mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.inputFields {
+  display: flex;
+
+  &__incomes {
+    padding-left: 10px;
+    border-radius: 10px;
+    color: $color-primary;
+    border: solid 1px $color-primary;
+    background-color: $color-grey-medium;
+    &--inputArea {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-around;
+      #inputIncomeText {
+        width: 35%;
+      }
+      #inputIncomeSum {
+        width: 25%;
+      }
+      #inputIncomeButton {
+        width: 20%;
+        font-size: 0.8em;
+      }
+    }
+    &--separatingLine {
+      color: $color-grey-medium;
+    }
+  }
+  &__expenses {
+    padding-left: 10px;
+    border-radius: 10px;
+    color: $color-primary;
+    border: solid 1px $color-primary;
+    background-color: $color-grey-medium;
+
+    &--inputArea {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-around;
+      #inputExpenseText {
+        width: 35%;
+      }
+      #inputExpenseSum {
+        width: 25%;
+      }
+      #inputExpenseButton {
+        width: 20%;
+        font-size: 0.8em;
+      }
+    }
+    &--separatingLine {
+      color: $color-grey-medium;
+    }
+  }
+}
